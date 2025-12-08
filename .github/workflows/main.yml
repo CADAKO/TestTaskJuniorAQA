@@ -1,0 +1,41 @@
+# .github/workflows/main.yml
+name: Effective Mobile AQA Tests
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  run-aqa-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v4
+
+    - name: Set up Python environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10' # Используем Python 3.10, как указано в ТЗ
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        # Устанавливаем браузеры Playwright на сервере GitHub
+        playwright install
+
+    - name: Run Pytest AQA tests
+      # Запускаем тесты и генерируем Allure-отчет в директорию allure_results
+      run: |
+        python -m pytest tests/test_main_page_navigation.py --alluredir allure_results
+
+    - name: Upload Allure results to GitHub Artifacts
+      # Сохраняем результаты тестов как артефакт, чтобы вы могли их скачать
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-results
+        path: allure_results
+        retention-days: 7
