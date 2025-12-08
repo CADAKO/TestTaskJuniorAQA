@@ -1,0 +1,5 @@
+# requirements.txt
+pytest>=8.0.0
+pytest-playwright>=0.4.0
+allure-pytest>=2.13.6
+playwright>=1.44.0
