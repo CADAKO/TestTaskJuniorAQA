@@ -1,10 +1,11 @@
 from playwright.sync_api import Page, Locator
 
+
 class MainPage:
-    BASE_URL='effective-mobile.ru'
+    BASE_URL = 'https://effective-mobile.ru'
 
     def __init__(self, page):
-        self.page=page
+        self.page = page
 
     def open(self):
         self.page.goto(self.BASE_URL)
@@ -40,4 +41,3 @@ class MainPage:
     @property
     def feedback_anchor(self) -> Locator:
         return self.page.getByText('Контактная информация')
-
