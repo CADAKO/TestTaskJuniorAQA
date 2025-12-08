@@ -12,32 +12,32 @@ class MainPage:
 
     @property
     def about_us_link(self) -> Locator:
-        return self.page.getByText('О нас')
+        return self.page.get_By_Text('О нас')
 
     @property
     def contacts_link(self) -> Locator:
-        return self.page.getByText('Контакты')
+        return self.page.get_By_Text('Контакты')
 
     @property
     def specializations_link(self) -> Locator:
-        return self.page.getByText('Вакансии')
+        return self.page.get_By_Text('Вакансии')
 
     @property
     def feedback_link(self) -> Locator:
-        return self.page.getByText('Отзывы')
+        return self.page.get_By_Text('Отзывы')
 
     @property
     def about_us_anchor(self) -> Locator:
-        return self.page.getByText('О компании')
+        return self.page.get_By_Text('О компании')
 
     @property
     def contacts_anchor(self) -> Locator:
-        return self.page.getByText('Кого мы ищем')
+        return self.page.get_By_Text('Кого мы ищем')
 
     @property
     def specializations_anchor(self) -> Locator:
-        return self.page.getByText('Кого мы ищем')
+        return self.page.get_By_Text('Кого мы ищем')
 
     @property
     def feedback_anchor(self) -> Locator:
-        return self.page.getByText('Контактная информация')
+        return self.page.get_By_Text('Контактная информация')
