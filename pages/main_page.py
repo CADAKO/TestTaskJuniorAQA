@@ -12,19 +12,19 @@ class MainPage:
 
     @property
     def about_us_link(self) -> Locator:
-        return self.page.get_by_role(role='link', name='О нас')
+        return self.page.get_by_role(role='link', name='О нас', exact=True)
 
     @property
     def contacts_link(self) -> Locator:
-        return self.page.get_by_role(role='link', name='Контакты')
+        return self.page.get_by_role(role='link', name='Контакты', exact=True)
 
     @property
     def specializations_link(self) -> Locator:
-        return self.page.get_by_role(role='link', name='Вакансии')
+        return self.page.get_by_role(role='link', name='Вакансии', exact=True)
 
     @property
     def feedback_link(self) -> Locator:
-        return self.page.get_by_role(role='link', name='Отзывы')
+        return self.page.get_by_role(role='link', name='Отзывы', exact=True)
 
     @property
     def about_us_anchor(self) -> Locator:
