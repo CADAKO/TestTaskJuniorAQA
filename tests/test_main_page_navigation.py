@@ -2,7 +2,7 @@
 import allure
 import pytest
 from pages.main_page import MainPage
-from playwright.sync_api import Page, Locator
+from playwright.sync_api import Page
 
 
 class TestNavigation:

@@ -1,4 +1,4 @@
-from playwright.sync_api import Page, Locator
+from playwright.sync_api import Page
 
 
 class MainPage:
@@ -9,4 +9,3 @@ class MainPage:
 
     def open(self):
         self.page.goto(self.BASE_URL)
-

@@ -18,7 +18,7 @@ jobs:
     - name: Set up Python environment
       uses: actions/setup-python@v5
       with:
-        python-version: '3.10' # Используем Python 3.10, как указано в ТЗ
+        python-version: '3.10'
 
     - name: Install dependencies
       run: |
@@ -33,7 +33,7 @@ jobs:
         python -m pytest tests/test_main_page_navigation.py --alluredir allure_results
 
     - name: Upload Allure results to GitHub Artifacts
-      # Сохраняем результаты тестов как артефакт, чтобы вы могли их скачать
+      # Сохраняем результаты тестов как артефакт
       uses: actions/upload-artifact@v4
       with:
         name: allure-results
