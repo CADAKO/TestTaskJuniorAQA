@@ -4,7 +4,7 @@ from playwright.sync_api import Page, Locator
 class MainPage:
     BASE_URL = 'https://effective-mobile.ru'
 
-    def __init__(self, page):
+    def __init__(self, page: Page):
         self.page = page
 
     def open(self):
@@ -12,32 +12,32 @@ class MainPage:
 
     @property
     def about_us_link(self) -> Locator:
-        return self.page.get_By_Text('О нас')
+        return self.page.get_by_text('О нас')
 
     @property
     def contacts_link(self) -> Locator:
-        return self.page.get_By_Text('Контакты')
+        return self.page.get_by_text('Контакты')
 
     @property
     def specializations_link(self) -> Locator:
-        return self.page.get_By_Text('Вакансии')
+        return self.page.get_by_text('Вакансии')
 
     @property
     def feedback_link(self) -> Locator:
-        return self.page.get_By_Text('Отзывы')
+        return self.page.get_by_text('Отзывы')
 
     @property
     def about_us_anchor(self) -> Locator:
-        return self.page.get_By_Text('О компании')
+        return self.page.get_by_text('О компании')
 
     @property
     def contacts_anchor(self) -> Locator:
-        return self.page.get_By_Text('Кого мы ищем')
+        return self.page.get_by_text('Кого мы ищем')
 
     @property
     def specializations_anchor(self) -> Locator:
-        return self.page.get_By_Text('Кого мы ищем')
+        return self.page.get_by_text('Кого мы ищем')
 
     @property
     def feedback_anchor(self) -> Locator:
-        return self.page.get_By_Text('Контактная информация')
+        return self.page.get_by_text('Контактная информация')
